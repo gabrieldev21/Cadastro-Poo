@@ -103,6 +103,8 @@ public class Menu
 		{
 
 			Professor Pr = new Professor();
+			System.out.println("Digite o ID:");
+			Pr.setID(leitor.nextInt());
 			System.out.println("Digite um nome:");
 			Pr.setNome(leitor.next());
 			System.out.println("Digite a idade:");
@@ -119,8 +121,27 @@ public class Menu
 		public void listProfessor() throws IOException
 		{
 			//FAZER
-			System.out.println();
-			menu();
+			System.out.println("Digite o ID do professor:");
+			int M = (leitor.nextInt());
+			int i = 0;
+
+			while (!((listP.get(i).getID()) == M)) {
+				i++;
+			}
+
+			System.out.println("Nome: " + listP.get(i).getNome());
+			System.out.println("Idade: " + listP.get(i).getIdade());
+			System.out.println("Sexo: " + listP.get(i).getSexo());
+			System.out.println("Disciplina: " + listP.get(i).getDisciplina());
+
+
+			System.out.println("Deseja consultar outro professor? Aperte 1 para sim");
+			int testar = (leitor.nextInt());
+			if (testar == 1) {
+				listProfessor();
+			} else {
+				menu();
+			}
 		}
 		public void modAluno() throws IOException
 		{
@@ -181,7 +202,8 @@ public class Menu
 					listA.get(i).setNota3(leitor.nextDouble());
 					menu();
 				}
-				default: {
+				default:
+					{
 						System.out.println("\n!Numero Incorreto, voltando ao menu");
 						menu();
 					}
