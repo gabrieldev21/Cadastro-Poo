@@ -23,6 +23,7 @@ public class Menu
 				System.out.println("3: Cadastro de Professores");
 				System.out.println("4: Listar Professores");
 				System.out.println("5: Modificar Alunos");
+				System.out.println("6: Modificar Professores");
 				System.out.println("0: Sair");
 				
 				int numMenu;
@@ -34,6 +35,7 @@ public class Menu
 				case 3 -> cadProfessor();
 				case 4 -> listProfessor();
 				case 5 -> modAluno();
+				case 6 -> modProf();
 				case 0 -> System.out.println("!Você Fechou o Programa!\n");
 				default -> {
 					System.out.println("\n!Numero Incorreto!");
@@ -143,10 +145,56 @@ public class Menu
 				menu();
 			}
 		}
+		public void modProf() throws IOException
+		{
+			System.out.println("Digite o ID do Professor:");
+			int M = (leitor.nextInt());
+			int i = 0;
+
+			while (!((listP.get(i).getID()) == M)) {
+				i++;
+			}
+
+			System.out.println("1- Nome: " + listP.get(i).getNome());
+			System.out.println("2- Idade: " + listP.get(i).getIdade());
+			System.out.println("3- Sexo: " + listP.get(i).getSexo());
+			System.out.println("4- Disciplina: " + listP.get(i).getDisciplina());
+			System.out.println("Selecione o dado que deseja modificar: ");
+			int sel = leitor.nextInt();
+			switch (sel)
+			{
+				case 1:
+				{
+					System.out.println("Digite um nome:");
+					listP.get(i).setNome(leitor.next());
+					menu();
+				}
+				case 2: {
+					System.out.println("Digite a idade:");
+					listP.get(i).setIdade(leitor.nextInt());
+					menu();
+				}
+				case 3: {
+					System.out.println("Digite o sexo:");
+					listP.get(i).setSexo(leitor.next());
+					menu();
+				}
+				case 4: {
+					System.out.println("Digite a Disciplina:");
+					listP.get(i).setDisciplina(leitor.next());
+					menu();
+				}
+				default:
+				{
+					System.out.println("\n!Numero Incorreto, voltando ao menu");
+					menu();
+				}
+			}
+		}
+
+
 		public void modAluno() throws IOException
 		{
-
-
 			System.out.println("Digite a matricula do aluno:");
 			int M = (leitor.nextInt());
 			int i = 0;
