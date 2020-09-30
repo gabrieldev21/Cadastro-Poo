@@ -1,0 +1,2 @@
+Nome: Chad Idade: 20 Sexo: Masculino Disciplina: Portugues Nota1: 4.0 Nota2: 9.0 Nota3: 9.0 Aprovado: true;
+Nome: Hugo Idade: 20 Sexo: Masculino Disciplina: Portugues Nota1: 5.0 Nota2: 9.0 Nota3: 8.0 Aprovado: true;
