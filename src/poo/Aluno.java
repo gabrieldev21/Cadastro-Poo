@@ -7,21 +7,11 @@ package poo;
 			private double nota1;
 			private double nota2;
 			private double nota3;
-			String aprovado;
-			
-			
-			public boolean isAprovado()
+
+
+			public double media()
 			{
-				
-			double media = (nota1 + nota2 + nota3)/3;
-				
-			boolean isAp = false;
-				
-				if (media>6.0)
-				{
-					isAp = true;
-				}
-				return isAp;
+			return (nota1 + nota2 + nota3)/3;
 			}
 			
 			
@@ -53,7 +43,8 @@ package poo;
 			public int getMatricula() {
 				return matricula;
 			}
-			public void setMatricula(int matricula) {
+			public void setMatricula(int matricula)
+			{
 				this.matricula = matricula;
 			}
 
