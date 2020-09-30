@@ -4,7 +4,8 @@ package poo;
 
 			private String disciplina;
 
-			public String getDisciplina() {
+			public String getDisciplina()
+			{
 				return disciplina;
 			}
 

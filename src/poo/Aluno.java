@@ -8,7 +8,7 @@ package poo;
 			private double nota1;
 			private double nota2;
 			private double nota3;
-			private  double media;
+
 
 
 
@@ -44,10 +44,6 @@ package poo;
 			{
 				this.Disciplinas = disciplinas;
 			}
-			public String getDisciplina(String disciplinas)
-			{
-				return disciplinas;
-			}
 			public int getMatricula()
 			{
 				return matricula;
@@ -55,10 +51,6 @@ package poo;
 			public void setMatricula(int matricula)
 			{
 				this.matricula = matricula;
-			}
-			public double setMedia()
-			{
-				return (nota1 + nota2 + nota3)/3;
 			}
 			public double getMedia()
 			{
