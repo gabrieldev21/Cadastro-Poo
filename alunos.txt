@@ -1,1 +1,0 @@
-Nome: br Idade: 24 Sexo: m Disciplina: rew Nota1: 5.0 Nota2: 7.0 Nota3: 9.0 Aprovado: true;
